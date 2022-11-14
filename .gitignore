@@ -1,0 +1,30 @@
+# build output
+build
+dist
+.next
+
+# dependencies
+node_modules
+package-lock.json
+
+# logs & pids
+*.log
+pids
+
+# coverage
+.nyc_output
+coverage
+
+# editors
+**/.idea
+**/.#*
+.nvmrc
+
+# cache
+.swc/
+.eslintcache
+*.tsbuildinfo
+
+# misc
+.DS_Store
+.env*

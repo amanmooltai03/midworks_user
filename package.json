@@ -1,0 +1,72 @@
+{
+  "private": true,
+  "engines": {
+    "node": "16.x",
+    "npm": "please use yarn instead"
+  },
+  "packageManager": "yarn@1.22.19",
+  "scripts": {
+    "dev": "NODE_OPTIONS='--inspect' next",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "ANALYZE=true next build",
+    "check": "tsc && prettier --list-different . && npm run lint:js && npm run lint:css && npm run test",
+    "lint:css": "stylelint '**/*.{css,scss}'",
+    "lint:js": "next lint --dir . --file '**/*.@(js|ts|tsx)'",
+    "format": "prettier --write . && npm run lint:js -- --fix && npm run lint:css -- --fix",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.7",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "framer-motion": "^7.6.4",
+    "next": "13.0.2",
+    "next-auth": "^4.16.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sharp": "^0.31.2"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^13.0.2",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "8.27.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "13.0.2",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.0",
+    "jest": "^29.2.2",
+    "jest-environment-jsdom": "^29.2.2",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.18",
+    "prettier": "2.7.1",
+    "sass": "^1.56.0",
+    "stylelint": "^14.14.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-config-standard-scss": "^6.1.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.3.0",
+    "typescript": "4.8.4"
+  }
+}
